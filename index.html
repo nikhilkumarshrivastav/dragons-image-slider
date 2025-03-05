@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pure CSS Image Slider</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: Arial, sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; background: #f4f4f4; }
+        .slider-container { position: relative; width: 80%; max-width: 600px; overflow: hidden; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        .slides { display: flex; width: 1000%; transition: transform 0.5s ease-in-out; }
+        .slide { width: 10%; flex: 1; }
+        .slide img { width: 100%; display: block; }
+        
+        /* Radio buttons */
+        input { display: none; }
+        .navigation { display: flex; justify-content: center; margin-top: 10px; }
+        .navigation label { width: 10px; height: 10px; background: gray; border-radius: 50%; margin: 5px; cursor: pointer; transition: 0.3s; }
+        .navigation label:hover, input:checked + label { background: black; }
+        
+        /* Slide positioning */
+        #slide1:checked ~ .slides { transform: translateX(0%); }
+        #slide2:checked ~ .slides { transform: translateX(-10%); }
+        #slide3:checked ~ .slides { transform: translateX(-20%); }
+        #slide4:checked ~ .slides { transform: translateX(-30%); }
+        #slide5:checked ~ .slides { transform: translateX(-40%); }
+        #slide6:checked ~ .slides { transform: translateX(-50%); }
+        #slide7:checked ~ .slides { transform: translateX(-60%); }
+        #slide8:checked ~ .slides { transform: translateX(-70%); }
+        #slide9:checked ~ .slides { transform: translateX(-80%); }
+        #slide10:checked ~ .slides { transform: translateX(-90%); }
+    </style>
+</head>
+<body>
+    <div class="slider-container">
+        <input type="radio" name="slider" id="slide1" checked>
+        <input type="radio" name="slider" id="slide2">
+        <input type="radio" name="slider" id="slide3">
+        <input type="radio" name="slider" id="slide4">
+        <input type="radio" name="slider" id="slide5">
+        <input type="radio" name="slider" id="slide6">
+        <input type="radio" name="slider" id="slide7">
+        <input type="radio" name="slider" id="slide8">
+        <input type="radio" name="slider" id="slide9">
+        <input type="radio" name="slider" id="slide10">
+        
+        <div class="slides">
+            <div class="slide"><img src="images/dragon_1.jpg" alt="Dragon 1"></div>
+            <div class="slide"><img src="images/dragon_2.jpg" alt="Dragon 2"></div>
+            <div class="slide"><img src="images/dragon_3.jpg" alt="Dragon 3"></div>
+            <div class="slide"><img src="images/dragon_4.jpg" alt="Dragon 4"></div>
+            <div class="slide"><img src="images/dragon_5.jpg" alt="Dragon 5"></div>
+            <div class="slide"><img src="images/dragon_6.jpg" alt="Dragon 6"></div>
+            <div class="slide"><img src="images/dragon_7.jpg" alt="Dragon 7"></div>
+            <div class="slide"><img src="images/dragon_8.jpg" alt="Dragon 8"></div>
+            <div class="slide"><img src="images/dragon_9.jpg" alt="Dragon 9"></div>
+            <div class="slide"><img src="images/dragon_10.jpg" alt="Dragon 10"></div>
+        </div>
+        
+        <div class="navigation">
+            <label for="slide1"></label>
+            <label for="slide2"></label>
+            <label for="slide3"></label>
+            <label for="slide4"></label>
+            <label for="slide5"></label>
+            <label for="slide6"></label>
+            <label for="slide7"></label>
+            <label for="slide8"></label>
+            <label for="slide9"></label>
+            <label for="slide10"></label>
+        </div>
+    </div>
+</body>
+</html>
